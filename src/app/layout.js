@@ -1,3 +1,4 @@
+"use client ";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -18,11 +19,30 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  // <script src="https://s3.amazonaws.com/idme/developer/idme-buttons/assets/js/idme-wallet-button.js"></script>
+
+
+
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+        <title>ID.me Integration Exercise</title>
+      </head>
+      <body>
+        {/* <span id="idme-wallet-button"
+          data-client-id="f45665628707834c1070ca9f307d063e"
+          data-redirect="https://perfectlyposh.vercel.app/idme/callback"
+          data-response="token"
+          data-text="Military members receive 10% off with ID.me"
+          data-show-verify="false"
+          data-display="popup"
+          data-scope="military"
+        >
+        </span> */}
+
         {children}
       </body>
     </html>
